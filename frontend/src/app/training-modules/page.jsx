@@ -44,7 +44,10 @@ const Traininig = () => {
   const [currentModuleIndex, setCurrentModuleIndex] = useState(0);
   const router = useRouter();
 
-  const token = localStorage.getItem("token");
+  let token = null;
+  if (typeof window !== "undefined") {
+    token = localStorage.getItem("token");
+  }
   if (!token) {
     router.push("/Auth/Login");
   }

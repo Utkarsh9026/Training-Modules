@@ -46,11 +46,13 @@ const Login = () => {
   };
 
   useEffect(() => {
-    const token = localStorage.getItem("token");
-    if (token) {
-      router.back();
+    if (typeof window !== "undefined") {
+      const token = localStorage.getItem("token");
+      if (token) {
+        router.back();
+      }
     }
-  }, []);
+  }, [router]);
 
   return (
     <div className="min-h-screen mt-10 flex items-center justify-center">
