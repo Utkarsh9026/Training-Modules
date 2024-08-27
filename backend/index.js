@@ -9,7 +9,7 @@ import ProgressRoutes from "./routes/progress.routes.js";
 import connectDb from "./config/db.config.js";
 
 const app = express();
-let PORT = process.env.PORT || 5000;
+let PORT = process.env.PORT || 3000;
 
 //MongoDB connection
 connectDb();
@@ -31,5 +31,5 @@ app.use("/api/video", VideosRoutes);
 app.use("/api/progress", ProgressRoutes);
 
 app.listen(PORT, () => {
-  console.log("Listening on port -> ", +PORT);
+  console.log(`Server is running on port ${PORT}`);
 });
