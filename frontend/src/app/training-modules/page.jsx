@@ -1,5 +1,5 @@
 "use client";
-import ProgressBar from "@/components/progressBar";
+import ProgressBar from "@/components/ProgressBar";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
